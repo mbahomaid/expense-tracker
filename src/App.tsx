@@ -2,6 +2,7 @@ import { useState } from "react";
 import ExpenseList from "./components/ExpenseList";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ExpenseFilter from "./components/ExpenseFilter";
+import ExpenseForm from "./components/ExpenseForm";
 
 const App = () => {
   const [selectCategory, setSelectCategory] = useState("");
@@ -18,8 +19,11 @@ const App = () => {
     : expenses;
   return (
     <div className="m-4">
-      <div className="mb-3">
-        {" "}
+      <div className="mb-5" >
+        <ExpenseForm />
+      </div>
+
+      <div className="mb-3" style={{ marginTop: "5rem" }}>
         <ExpenseFilter
           onSelectCategory={(category) => setSelectCategory(category)}
         />
