@@ -1,4 +1,4 @@
-import { categories } from "../constants.ts";
+import categories from "../categories";
 
 interface Props {
   onSelectCategory: (category: string) => void;
